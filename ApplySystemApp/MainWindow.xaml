@@ -21,7 +21,7 @@
             <Image MaxHeight="40" Source="C:\Users\User\source\repos\ApplySystemApp\ApplySystemApp\bin\Debug\iconApply.png"/>
             <TextBlock Margin="20,2" TextWrapping="Wrap" TextAlignment="Left" FontSize="12" Text="Введите имя программы, папки, документа, которые требуется открыть." MaxWidth="350" />
         </StackPanel>
-        <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" Orientation="Horizontal" Margin="0,15,0,0">
+        <StackPanel FocusManager.FocusedElement="{Binding ElementName=commandSourse}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" Orientation="Horizontal" Margin="0,15,0,0">
             <TextBlock Text="Открыть:" Margin="15,5" TextAlignment="Left" FontSize="12" Width="50"/>
             <TextBox x:Name="commandSourse" Width="320" Height="25"/>
         </StackPanel>
