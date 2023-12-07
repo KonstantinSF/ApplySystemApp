@@ -19,11 +19,11 @@
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
             <Image MaxHeight="40" Source="C:\Users\User\source\repos\ApplySystemApp\ApplySystemApp\bin\Debug\iconApply.png"/>
-            <TextBlock Margin="20,2" TextWrapping="Wrap" TextAlignment="Left" FontSize="12" Text="Введите имя программы, папки, документа, которые требуется открыть." MaxWidth="350" />
+            <TextBlock Margin="20,2" TextWrapping="Wrap" VerticalAlignment="Center" TextAlignment="Left" FontSize="12" Text="Введите имя исполняемого файла программы." MaxWidth="350" />
         </StackPanel>
-        <StackPanel FocusManager.FocusedElement="{Binding ElementName=commandSourse}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" Orientation="Horizontal" Margin="0,15,0,0">
+        <StackPanel FocusManager.FocusedElement="{Binding ElementName=commandSourse}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" Orientation="Horizontal" Margin="0,10,0,0">
             <TextBlock Text="Открыть:" Margin="15,5" TextAlignment="Left" FontSize="12" Width="50"/>
-            <TextBox x:Name="commandSourse" Width="320" Height="25"/>
+            <TextBox x:Name="commandSourse" Width="320" Height="25" TextChanged="commandSourse_textChanged"/>
         </StackPanel>
         <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
             <Image Margin="70,0,0,0" MaxHeight="25" Source="C:\Users\User\source\repos\ApplySystemApp\ApplySystemApp\bin\Debug\iconShield.png"/>
@@ -31,9 +31,9 @@
         </StackPanel>
         <TextBlock Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Background="#FFF0F0F0"/>
         <StackPanel x:Name="buttonsStackPanel" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="1" Margin="80,0,0,0">
-            <Button x:Name="OkButton" Content="OK" Height="28" Width="90" Margin="5,0" IsEnabled="False"/>
-            <Button x:Name="CencelButton" Content="Отмена" Height="28" Width="90" Margin="5,0"/>
-            <Button x:Name="OpenButton" Content="Обзор..." Height="28" Width="90" Margin="5,0"/>
+            <Button x:Name="OkButton" Content="OK" Height="28" Width="90" Margin="5,0" IsEnabled="False" Click="ok_btn_Click"/>
+            <Button x:Name="CencelButton" Content="Отмена" Height="28" Width="90" Margin="5,0" Click="cencel_btn_Click"/>
+            <Button x:Name="OpenButton" Content="Обзор..." Height="28" Width="90" Margin="5,0" Click="open_btn_Click"/>
         </StackPanel>
     </Grid>
 </Window>
